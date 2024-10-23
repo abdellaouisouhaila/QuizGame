@@ -2,7 +2,11 @@
     "compilerOptions": {
       "baseUrl": "src",
       "paths": {
-        "components/*": ["src/components/*"]
+        "components/*": ["src/components/*"],
+        "styles/auth/*": ["styles/auth/*"],
+        "styles/dashboard/*": ["styles/dashboard/*"],
+        "styles/layouts/*": ["styles/layouts/*"]
+
       }
     },
     "include": ["src/**/*"]

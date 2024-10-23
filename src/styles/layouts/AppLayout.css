@@ -1,0 +1,23 @@
+.app-layout {
+    display: flex;
+    height: 100vh; 
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+  }
+
+  .topbar {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+  
+  
+  .main-content {
+    flex: 1;
+    overflow-y: auto;
+    border-radius: 20px;
+  }
+
+  

@@ -1,0 +1,44 @@
+.sidebar {
+  background-color: #f3f4f6;
+  width: 14%;
+  padding: 20px 10px 0px 10px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 30px;
+}
+
+/* Sidebar Item Styling */
+.sidebar-item {
+  justify-content: center;
+
+  display: flex;
+  align-items: center;  /* Center items vertically */
+  padding: 15px 0;
+  color: #6b7280; /* Default text color */
+  font-size: 16px;
+  cursor: pointer;
+  list-style: none; /* Remove default list styling */
+}
+
+.sidebar-item svg {
+  margin-right: 10px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* Active State */
+.sidebar-item.active {
+  background-color: #6b7280; /* Background color when active */
+  color: white; /* Text color when active */
+  border-radius: 20px;
+}
+
+.sidebar-item.active svg {
+  color: white; /* Icon color when active */
+}

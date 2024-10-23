@@ -231,6 +231,16 @@ comment the up login-container
     text-align: center; /* Center the text within its flex item */
 }
 
+.form-group input.border-red {
+    border: 1px solid red !important; /* Use !important to override any conflicting styles */
+}
+
+
+.text-danger {
+    color: red;
+    font-size: 0.875rem; /* Adjust the font size as needed */
+}
+
 
 @media (max-width: 1024px) {
     .container {
