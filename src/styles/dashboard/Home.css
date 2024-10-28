@@ -1,0 +1,80 @@
+
+.page-content {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  }
+
+
+.quiz-passed {
+  margin-left: 5%;
+}
+.profile-pic {
+  padding: 20px;
+  width: 25%;
+  height: 35vh;
+  border-radius: 45px 45px 45px 45px;
+
+
+}
+.userName {
+  font-family: Poppins;
+  font-size: 200%;
+  font-weight: 700;
+  line-height: 19.5px;
+  color: #696F79;
+  text-align: left;
+}
+.bonusBoos {
+  font-family: Poppins;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 28.5px;
+  text-align: left;
+  color: #696F79;
+
+}
+
+.icon {
+  box-shadow: 0px 15px 40px 5px #EDEDED;
+  padding: 20px;
+  border-radius: 15px 15px 15px 15px;
+  color: #696F79; 
+ 
+
+}
+.spans {
+  display: flex;
+   flex-direction: column 
+}
+.quiz-class {
+font-family: Poppins;
+font-size: 200%;
+font-weight: 700;
+line-height: 43.5px;
+color: #696F79;
+
+}
+.quiz-answers {
+  width: 96px;
+height: 24px;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+color: #696F79;
+
+}
+.achievements{
+  font-family: Poppins;
+font-size: 25px;
+font-weight: 700;
+line-height: 37.5px;
+text-align: left;
+color: #696F79;
+
+}
