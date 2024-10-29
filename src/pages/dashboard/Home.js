@@ -7,16 +7,19 @@ import AccessTimeFilledIcon from "@mui/icons-material/AccessTimeFilled";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import "styles/dashboard/Home.css";
 import profilePic from "../../assets/profilePic.png";
-import { Grid, Paper, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const Home = () => {
   return (
     <div className="main-content">
       <div className="page-content">
+      <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={4}>
         <img src={profilePic} alt="Picture" className="profile-pic" />
+        </Grid>
+        <Grid item xs={8}>
         <div className="quiz-passed">
-          <span>
-            <Box sx={{ width: "100%" }}>
               <Stack spacing={2}>
                 <span className="userName">Oluwatobi Olowu</span>
                 <span className="bonusBoos">Bonus booster 24lv</span>
@@ -60,9 +63,10 @@ const Home = () => {
                   </div>
                 </Stack>
               </Stack>
-            </Box>
-          </span>
         </div>
+        </Grid>
+      </Grid>
+    </Box>
       </div>
      
     </div>

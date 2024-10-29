@@ -1,21 +1,19 @@
 
 .page-content {
-  display: flex;
   align-items: center;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  height: 100%;
+  min-height: 100%; 
+  padding: 2%;
+
   }
 
-
 .quiz-passed {
+  margin-top: 5%;
   margin-left: 5%;
 }
 .profile-pic {
-  padding: 20px;
-  width: 25%;
-  height: 35vh;
   border-radius: 45px 45px 45px 45px;
 
 
