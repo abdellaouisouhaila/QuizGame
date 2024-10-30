@@ -1,0 +1,73 @@
+.achievements {
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 37.5px;
+    text-align: left;
+    color: #696F79;
+}
+
+.linear-progress {
+    justify-content: center;
+    align-items: center;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 366px;
+    border-radius: 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 15px 40px 5px #EDEDED;
+    padding: 20px;
+    color: #696F79;
+    overflow: hidden;
+    /* Empêche le débordement du contenu */
+}
+
+
+.container {
+    display: grid;
+    gap: 15px;
+    /* Réduit l'espace entre les lignes */
+    width: 100%;
+
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.image-center {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-top: -100px;
+    /* Réduit l'espace entre les lignes */
+}
+
+.image-left,
+.image-right {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.caption {
+    font-size: 0.9em;
+    color: #333;
+    margin-top: 5px;
+   
+}
