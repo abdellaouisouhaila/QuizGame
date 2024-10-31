@@ -33,7 +33,7 @@ const Achievement = () => {
           </div>
         </Grid>
         <div className="box-content">
-          <div className="container">
+          <div className="achievement-container">
             <div className="row">
               <div className="image-container">
                 <img src={comeback} alt="Image 1" className="image-left" />
@@ -54,10 +54,8 @@ const Achievement = () => {
           <Divider
             sx={{
               width: "426px",
-              height: "0px",
               top: "897px",
               left: "387px",
-              gap: "0px",
               border: "1px 0px 0px 0px",
               opacity: "0px",
               border: "1px solid #DADADA",

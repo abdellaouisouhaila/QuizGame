@@ -9,6 +9,7 @@ import "styles/dashboard/Home.css";
 import profilePic from "../../assets/profilePic.png";
 import { Grid } from "@mui/material";
 import Achievement from '../dashboard/Achievement';
+import Featuredcategory from "./Featuredcategory";
 
 
 const Home = () => {
