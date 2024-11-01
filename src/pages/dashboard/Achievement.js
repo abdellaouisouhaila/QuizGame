@@ -1,8 +1,6 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import Divider from "@mui/material/Divider";
-
-import "styles/dashboard/Home.css";
 import "styles/dashboard/Achievement.css";
 import LinearProgress from "@mui/material/LinearProgress";
 import comeback from "../../assets/comeback.png";
@@ -12,8 +10,8 @@ import lucky from "../../assets/lucky.png";
 const Achievement = () => {
   const progressValue = 70;
   return (
-    <Grid container sx={{ paddingTop: "5%" }}>
-      <Grid item xs={6} container>
+    <Grid container direction="column" sx={{ paddingTop: "5%" }}>
+      <Grid item container alignItems="center" spacing={2}>
         <Grid item xs={6}>
           <div className="achievements">Achievements</div>
         </Grid>
@@ -53,14 +51,20 @@ const Achievement = () => {
           </div>
           <Divider
             sx={{
+              marginTop: "40px ",
               width: "426px",
               top: "897px",
               left: "387px",
-              border: "1px 0px 0px 0px",
-              opacity: "0px",
               border: "1px solid #DADADA",
             }}
-          /> View All
+          />
+          <div
+            className="view-all"
+            style={{cursor: "pointer", color: "#696F79", marginTop: "20px"
+            }}
+          >
+            View All
+          </div>
         </div>
       </Grid>
     </Grid>

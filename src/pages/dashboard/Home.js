@@ -9,7 +9,7 @@ import "styles/dashboard/Home.css";
 import profilePic from "../../assets/profilePic.png";
 import { Grid } from "@mui/material";
 import Achievement from '../dashboard/Achievement';
-import Featuredcategory from "./Featuredcategory";
+import Featuredcategory from "../dashboard/Featuredcategory";
 
 
 const Home = () => {
@@ -125,9 +125,17 @@ const Home = () => {
               </div>
             </Grid>
           </Grid>
+          <Grid container spacing={2} sx={{ marginTop: "20px" }}>
+            <Grid item xs={6}>
+              <Achievement />
+            </Grid>
+            <Grid item xs={6}>
+              <Featuredcategory />
+            </Grid>
+          </Grid>
           
         </Box>
-        <Achievement />
+        
       </div>
       
     </div>
