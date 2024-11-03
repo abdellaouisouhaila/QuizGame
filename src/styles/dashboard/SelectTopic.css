@@ -1,0 +1,32 @@
+.select-topic {
+    font-size: 200%;
+    font-weight: 700;
+    line-height: 19.5px;
+    color: #696F79;
+    text-align: left;
+}
+
+.featured-category {
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    color: #696F79;
+
+}
+
+.more-btn {
+    background-color: #6b7280;
+    color: white;
+    padding: 10px 65px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px 85%;
+}
+
+.more-btn:hover {
+    background-color: #4b5563;
+}

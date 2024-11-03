@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Button, Typography} from "@mui/material";
+import { Grid, Button} from "@mui/material";
 import "styles/dashboard/FeaturedCategory.css";
 import history from "../../assets/history.png";
 import medcine from "../../assets/medcine.png";
