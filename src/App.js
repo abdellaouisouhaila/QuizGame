@@ -7,7 +7,8 @@ import Home from './pages/dashboard/Home';
 import Sidebar from './components/layouts/Sidebar';
 import Topbar from './components/layouts/Topbar';
 import './App.css';
-
+import SelectTopic from './pages/dashboard/SelectTopic'
+import { Layout } from 'components/Layout';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<PrivateRoute />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/topics" element={<SelectTopic />} />
+
       </Routes>
     </div>
   );
@@ -27,15 +30,12 @@ const PrivateRoute = () => {
 };
 
 const Dashboard = () => (
-  <div className="app-container">
-    <Sidebar />
-    <div className="main-layout">
-      <Topbar />
+    <Layout>
       <Home />
+    </Layout>
      
       
-    </div>
-  </div>
+    
 );
 
 export default App;

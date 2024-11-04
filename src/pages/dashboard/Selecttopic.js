@@ -3,10 +3,13 @@ import Stack from "@mui/material/Stack";
 import { Grid, Button } from "@mui/material";
 import "../../styles/dashboard/SelectTopic.css";
 import history from "../../assets/history.png";
+import { Layout } from "components/Layout";
+import { LayoutWithoutTopBar } from "components/LayoutWithoutTopBar";
 
 
-const Selecttopic = () => {
+const SelectTopic = () => {
   return (
+    <LayoutWithoutTopBar>
     <div className="main-content">
 
     <div className="page-content">
@@ -95,8 +98,9 @@ const Selecttopic = () => {
       <button className="more-btn">More</button>
     </div>
     </div>
+    </LayoutWithoutTopBar>
     
   );
 };
 
-export default Selecttopic;
+export default SelectTopic;
