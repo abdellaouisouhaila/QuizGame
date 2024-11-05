@@ -15,8 +15,7 @@ import FeaturedCategory from "./Featuredcategory";
 const Home = () => {
   const progressValue = 70;
   return (
-    <div className="main-content">
-      <div className="page-content">
+
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid
@@ -135,10 +134,7 @@ const Home = () => {
           </Grid>
           
         </Box>
-        
-      </div>
-      
-    </div>
+    
   );
 };
 export default Home;
