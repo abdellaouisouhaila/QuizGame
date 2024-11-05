@@ -1,18 +1,44 @@
+/* General Styling */
 .select-topic {
-    font-size: 200%;
+    font-size: 2rem; /* 200% */
     font-weight: 700;
-    line-height: 19.5px;
-    color: #696F79;
+    line-height: 1.5;
+    color: #696f79;
     text-align: left;
 }
 
 .featured-category {
-    font-size: 100%;
+    font-size: 1rem; /* 100% */
     font-weight: 400;
-    line-height: 30px;
+    line-height: 1.5;
+    color: #696f79;
     text-align: left;
-    color: #696F79;
+}
 
+.image-container {
+    padding: 10px;
+    text-align: center;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.image-caption {
+    margin-top: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* More Button Styling */
+.more-btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
 }
 
 .more-btn {
@@ -24,9 +50,58 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin: 20px 85%;
 }
 
 .more-btn:hover {
     background-color: #4b5563;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 900px) {
+    /* Medium Screen Adjustments */
+    .select-topic {
+        font-size: 1.75rem;
+    }
+
+    .featured-category {
+        font-size: 0.9rem;
+    }
+
+    .more-btn-container {
+        justify-content: center;
+    }
+
+    .more-btn {
+        padding: 10px 50px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Small Screen Adjustments */
+    .select-topic {
+        font-size: 1.5rem;
+    }
+
+    .featured-category {
+        font-size: 0.85rem;
+    }
+
+    .image-container {
+        padding: 5px;
+    }
+
+    .image-caption {
+        font-size: 0.9rem;
+    }
+
+    .more-btn-container {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .more-btn {
+        padding: 8px 40px;
+        font-size: 14px;
+    }
 }

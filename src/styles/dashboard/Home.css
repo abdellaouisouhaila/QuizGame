@@ -1,70 +1,68 @@
+/* Home Styles */
 .page-content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: #F9F9F9; /* Slightly different background color */
   border-radius: 10px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  min-height: 100%; 
+  min-height: 100%;
   padding: 2%;
-
-  }
+}
 
 .quiz-passed {
   margin-top: 2%;
   margin-left: 5%;
 }
-.profile-pic {
-  border-radius: 45px 45px 45px 45px;
-}
-.userName {
-  font-family: Poppins;
-  font-size: 200%;
-  font-weight: 700;
-  line-height: 19.5px;
-  color: #696F79;
-  text-align: left;
-}
-.bonusBoos {
-  font-family: Poppins;
-  font-size: 100%;
-  font-weight: 400;
-  line-height: 28.5px;
-  text-align: left;
-  color: #696F79;
 
+.profile-pic {
+  border-radius: 45px;
+}
+
+.userName, .bonusBoos, .quiz-class, .quiz-answers {
+  font-family: 'Poppins', sans-serif;
+  color: #696F79;
+}
+
+.userName {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.bonusBoos {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.75;
 }
 
 .icon-box {
-  box-shadow: 0px 15px 40px 5px #EDEDED;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adjusted shadow */
   padding: 20px;
-  border-radius: 15px 15px 15px 15px;
-  color: #696F79; 
- 
-
+  border-radius: 15px;
+  color: #696F79;
+  transition: background-color 0.3s ease; /* Transition for hover effect */
 }
-.span-content {
+
+.icon-box:hover {
+  background-color: #E8E8E8; /* Background color change on hover */
+}
+
+.span-content, .spans {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Removed if not needed */
   align-items: center;
+  flex-direction: column;
 }
-.spans {
-  display: flex;
-  flex-direction: column ;
-  
-}
-.quiz-class {
-font-family: Poppins;
-font-size: 200%;
-font-weight: 700;
-line-height: 43.5px;
-color: #696F79;
-text-align: center;
-}
-.quiz-answers {
-font-family: Poppins;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: left;
-color: #696F79;
 
+.quiz-class {
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.quiz-answers {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
 }
