@@ -8,7 +8,6 @@ import agriculture from "../../assets/agriculture.png";
 import { useNavigate } from "react-router-dom";
 
 const FeaturedCategory = () => {
-  //9bal kona najmo nhoto navigate direct tawa men v6 men react-router-dom walina namlo kif el constructor al function hakii
   const navigate = useNavigate();
   const navigateToPage = () => {
     navigate("/topics");

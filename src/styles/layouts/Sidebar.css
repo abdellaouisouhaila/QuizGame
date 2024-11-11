@@ -1,5 +1,5 @@
 .sidebar {
-  width: 200px;
+  width: 250px;
   height: 100vh;
   background-color: #f4f5f7;
   position: fixed;
@@ -38,6 +38,7 @@
   margin: 10px 15px;
   transition: background-color 0.3s ease;
 }
+
 
 .sidebar-item:hover {
   background-color: #e5e7eb;

@@ -4,11 +4,11 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './contexts/AuthContext';
 import Login from './pages/auth/Login';
 import Home from './pages/dashboard/Home';
-import Sidebar from './components/layouts/Sidebar';
-import Topbar from './components/layouts/Topbar';
 import './App.css';
-import SelectTopic from './pages/dashboard/SelectTopic'
+import SelectTopic from './pages/dashboard/Selecttopic';
+import Instruction from './pages/dashboard/Instruction';
 import { Layout } from 'components/Layout';
+import AnswerQuestion from 'pages/dashboard/AnswerQuestion';
 
 function App() {
   return (
@@ -18,6 +18,10 @@ function App() {
         <Route path="/" element={<PrivateRoute />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/topics" element={<SelectTopic />} />
+        <Route path="/instruction" element={<Instruction />} />
+        <Route path="/answer" element={<AnswerQuestion />} />
+
+
 
       </Routes>
     </div>
