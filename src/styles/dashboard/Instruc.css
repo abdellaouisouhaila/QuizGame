@@ -1,19 +1,24 @@
 .history-quiz {
-    font-size: 2rem; /* 200% */
+    font-size: 2rem;
+    /* 200% */
     font-weight: 700;
     line-height: 1.5;
     color: #696f79;
     text-align: left;
 }
+
 .featured-category {
-    font-size: 1rem; /* 100% */
+    font-size: 1rem;
+    /* 100% */
     font-weight: 400;
     line-height: 1.5;
     color: #696f79;
     text-align: left;
 }
-.inst { 
-    font-size: 1.5rem; /* 200% */
+
+.inst {
+    font-size: 1.5rem;
+    /* 200% */
     font-weight: 500;
     line-height: 3.5;
     color: #696f79;
@@ -21,8 +26,10 @@
     margin-top: 20px;
     margin-right: 50px;
 }
+
 .timing {
-    font-size: 1.5rem; /* 200% */
+    font-size: 1.5rem;
+    /* 200% */
     font-weight: 300;
     line-height: 3.5;
     color: #696f79;
@@ -30,10 +37,40 @@
     margin-top: 20px;
 
 }
+
 .instruction-content {
-    font-size: 1.5rem; /* 200% */
+    font-size: 1.5rem;
+    /* 200% */
     font-weight: 300;
     color: #696f79;
     text-align: left;
     margin-top: 20px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Gray overlay */
+    z-index: 10;
+    /* Ensure it appears above content */
+}
+
+.submit-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    /* Above overlay */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    /* Adjust the size as needed */
+    text-align: center;
 }

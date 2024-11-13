@@ -9,6 +9,9 @@ import SelectTopic from './pages/dashboard/Selecttopic';
 import Instruction from './pages/dashboard/Instruction';
 import { Layout } from 'components/Layout';
 import AnswerQuestion from 'pages/dashboard/AnswerQuestion';
+import ApproveReq from './components/requests/ApproveReq';
+import { Circle } from '@mui/icons-material';
+import Submit from 'components/requests/Submit';
 
 function App() {
   return (
@@ -20,6 +23,11 @@ function App() {
         <Route path="/topics" element={<SelectTopic />} />
         <Route path="/instruction" element={<Instruction />} />
         <Route path="/answer" element={<AnswerQuestion />} />
+        <Route path='approve' element={<ApproveReq />} />
+        <Route path='circle' element={<Circle />} />
+        <Route path='submit' element={<Submit />} />
+
+
 
 
 
