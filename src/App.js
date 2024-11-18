@@ -10,8 +10,10 @@ import Instruction from './pages/dashboard/Instruction';
 import { Layout } from 'components/Layout';
 import AnswerQuestion from 'pages/dashboard/AnswerQuestion';
 import ApproveReq from './components/requests/ApproveReq';
-import { Circle } from '@mui/icons-material';
+import { Circle, Reviews } from '@mui/icons-material';
 import Submit from 'components/requests/Submit';
+import Score from 'components/requests/Score';
+import ReviewQuestions from 'pages/dashboard/ReviewQuestions';
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
         <Route path='approve' element={<ApproveReq />} />
         <Route path='circle' element={<Circle />} />
         <Route path='submit' element={<Submit />} />
+        <Route path='score' element={<Score />} />
+        <Route path='review' element={<ReviewQuestions />} />
+
 
 
 

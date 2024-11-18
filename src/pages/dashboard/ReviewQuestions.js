@@ -8,8 +8,7 @@ import history from "../../assets/history.png";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import RadioButtonUncheckedIcon from '@mui/icons-material/RadioButtonUnchecked';
 
-
-const AnswerQuestion = () => {
+const ReviewQuestions = () => {
   const [isSubmitModalOpen, setSubmitModalOpen] = useState(false);
 
   const handleNextClick = () => {
@@ -25,7 +24,7 @@ const AnswerQuestion = () => {
       <Stack spacing={2}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <span className="history-quiz">History Quiz</span>
-          <span className="history-quiz">Timer: 29:09 Mins</span>
+          <span className="history-quiz">Timer: <span style={{ color: '#F24E1E' }}>29:09</span> Mins </span>
         </div>
 
         <span className="featured-category">Answer the question below</span>
@@ -56,7 +55,7 @@ const AnswerQuestion = () => {
       <div className="inst">Choose answer</div>
       <div style={{ display: "flex", alignItems: "center" }}>
         <RadioButtonCheckedIcon />
-        <span className="featured-category">London</span>
+        <span className="featured-category" style={{ marginRight: '20%' }}>London</span> <span style={{ color: '#F24E1E', fontWeight:"700" }}>Your Answer</span>
       </div>
       <div style={{ display: "flex", alignItems: "center" }}>
         <RadioButtonUncheckedIcon />
@@ -64,7 +63,7 @@ const AnswerQuestion = () => {
       </div>
       <div style={{ display: "flex", alignItems: "center" }}>
         <RadioButtonUncheckedIcon />
-        <span className="featured-category">Liverpool</span>
+        <span className="featured-category" style={{ marginRight: '20%' }}>Liverpool</span> <span style={{ color: '#08AD36', fontWeight:"700" }}>Correct Answer</span>
       </div>
       <div style={{ display: "flex", alignItems: "center" }}>
         <RadioButtonUncheckedIcon />
@@ -72,7 +71,7 @@ const AnswerQuestion = () => {
       </div>
       <div className="more-btn-container">
         <button className="more-btn" onClick={handleNextClick}>
-          Next
+        New Quiz
         </button>
       </div>
       {/* Render Submit modal if open */}
@@ -82,4 +81,4 @@ const AnswerQuestion = () => {
   );
 };
 
-export default AnswerQuestion;
+export default ReviewQuestions;
