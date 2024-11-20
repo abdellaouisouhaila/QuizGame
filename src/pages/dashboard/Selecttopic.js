@@ -17,7 +17,7 @@ const SelectTopic = () => {
     const getCategories = async () => {
       try {
         const data = await fetchCategories();
-        setCategories(data);
+        setCategories(data); 
       } catch (err) {
         setError(err.message);
       } finally {
@@ -28,8 +28,8 @@ const SelectTopic = () => {
     getCategories();
   }, []);
 
-  const navigateToPage = () => {
-    navigate("/instruction");
+  const navigateToQuizPage = (categoryId) => {
+    navigate(`/instruction/${categoryId}`);
   };
 
   if (loading) {
@@ -73,7 +73,11 @@ const SelectTopic = () => {
       <Grid container spacing={2} sx={{ marginTop: "20px" }}>
         {categories.map((category) => (
           <Grid item xs={12} sm={6} md={4} lg={3} key={category.id}>
-            <div className="image-container">
+            <div
+              className="image-container"
+              onClick={() => navigateToQuizPage(category.id)}
+              style={{ cursor: "pointer" }}
+            >
               <img
                 src={`https://via.placeholder.com/150?text=${category.name}`}
                 alt={category.name}
@@ -86,7 +90,7 @@ const SelectTopic = () => {
       </Grid>
 
       <div className="more-btn-container">
-        <button className="more-btn" onClick={navigateToPage}>
+        <button className="more-btn">
           More
         </button>
       </div>

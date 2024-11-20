@@ -30,6 +30,10 @@ const FeaturedCategory = () => {
     navigate("/topics");
   };
 
+  const navigateToQuizPage = (categoryId)=> {
+    navigate(`/instruction/${categoryId}`);
+  };
+
   if (loading) {
     return (
       <Grid
@@ -83,7 +87,10 @@ const FeaturedCategory = () => {
       <Grid container  sx={{ marginTop: "20px" }}>
         {categories.map((category) => (
           <Grid item xs={6} key={category.id}>
-            <div className="image-container">
+            <div className="image-container"
+            onClick={() => navigateToQuizPage(category.id)} 
+            style={{ cursor: "pointer" }}
+            >
               <img
                 src={`https://via.placeholder.com/150?text=${category.name}`}
                 alt={category.name}

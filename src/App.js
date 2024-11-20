@@ -23,18 +23,13 @@ function App() {
         <Route path="/" element={<PrivateRoute />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/topics" element={<SelectTopic />} />
-        <Route path="/instruction" element={<Instruction />} />
+        <Route path="/instruction/:categoryId" element={<Instruction />} />
         <Route path="/answer" element={<AnswerQuestion />} />
         <Route path='approve' element={<ApproveReq />} />
         <Route path='circle' element={<Circle />} />
         <Route path='submit' element={<Submit />} />
         <Route path='score' element={<Score />} />
         <Route path='review' element={<ReviewQuestions />} />
-
-
-
-
-
 
       </Routes>
     </div>
