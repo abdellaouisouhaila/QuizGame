@@ -1,17 +1,63 @@
-import React from "react";
-import { Grid, Button } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import { Grid, Button, CircularProgress, Typography } from "@mui/material";
 import "styles/dashboard/FeaturedCategory.css";
-import history from "../../assets/history.png";
-import medcine from "../../assets/medcine.png";
-import technology from "../../assets/technology.png";
-import agriculture from "../../assets/agriculture.png";
 import { useNavigate } from "react-router-dom";
+import { fetchCategories } from "utils/triviaApi"; // Import the API function
 
 const FeaturedCategory = () => {
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const allCategories = await fetchCategories();
+        setCategories(allCategories.slice(0, 4)); // Limit to 4 categories
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getCategories();
+  }, []);
+
   const navigateToPage = () => {
     navigate("/topics");
   };
+
+  if (loading) {
+    return (
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        style={{ height: "50vh" }}
+      >
+        <CircularProgress />
+      </Grid>
+    );
+  }
+
+  if (error) {
+    return (
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        style={{ height: "50vh" }}
+      >
+        <Typography variant="h6" color="error">
+          Error: {error}
+        </Typography>
+      </Grid>
+    );
+  }
+
   return (
     <div>
       <Grid
@@ -34,35 +80,19 @@ const FeaturedCategory = () => {
         </Button>
       </Grid>
 
-      <Grid container spacing={2} sx={{ marginTop: "20px" }}>
-        <Grid item xs={6}>
-          <div className="image-container">
-            <img src={history} alt="Category 2" className="featured-image" />
-            <div className="image-caption">History</div>
-          </div>
-        </Grid>
-        <Grid item xs={6}>
-          <div className="image-container">
-            <img src={medcine} alt="Category 3" className="featured-image" />
-            <div className="image-caption">Medcine</div>
-          </div>
-        </Grid>
-        <Grid item xs={6}>
-          <div className="image-container">
-            <img src={technology} alt="Category 4" className="featured-image" />
-            <div className="image-caption">Technology</div>
-          </div>
-        </Grid>
-        <Grid item xs={6}>
-          <div className="image-container">
-            <img
-              src={agriculture}
-              alt="Category 4"
-              className="featured-image"
-            />
-            <div className="image-caption">Agriculture</div>
-          </div>
-        </Grid>
+      <Grid container  sx={{ marginTop: "20px" }}>
+        {categories.map((category) => (
+          <Grid item xs={6} key={category.id}>
+            <div className="image-container">
+              <img
+                src={`https://via.placeholder.com/150?text=${category.name}`}
+                alt={category.name}
+                className="featured-image"
+              />
+              <div className="image-caption">{category.name}</div>
+            </div>
+          </Grid>
+        ))}
       </Grid>
     </div>
   );
